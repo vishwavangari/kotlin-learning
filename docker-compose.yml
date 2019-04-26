@@ -1,0 +1,11 @@
+PostgreSQL:
+  restart: always
+  image: postgres
+  ports:
+    - "5432:5432"
+  environment:
+      DB_USER: "postgres"
+      DB_PASS: "postgres"
+      DB_NAME: "postgres_demo"
+  volumes:
+    - ./postgres-data:/var/lib/postgresql/data
